@@ -4,7 +4,8 @@
 import time
 import wiringpi2 as wiringpi
 import psutil
- 
+import atexit
+
 # WiringPi setup
 wiringpi.wiringPiSetup()
  
@@ -30,7 +31,14 @@ def SetLedBorg(red, green, blue):
 # A function to turn the LedBorg off
 def LedBorgOff():
     SetLedBorg(0, 0, 0)
- 
+
+# Function to handle exit    
+def ExitHandler():
+    LedBorgOff();
+
+#Turn off leds if script is closed
+atexit.register(ExitHandler)
+
 ###########
 # Globals #
 ###########
