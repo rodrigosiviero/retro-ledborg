@@ -70,11 +70,53 @@ def Check_Processes():
  	   global nintendo
            pinfo = proc.as_dict(attrs=['name'])
            if pinfo.get('name') == 'bash':
-               list = gameboyadvance 
+               list = supernintendo
+               break
+           elif pinfo.get('name') == 'bash':
+               list = megadrive
+               break
+           elif pinfo.get('name') == 'bash':
+               list = snes
+               break
+           elif pinfo.get('name') == 'bash':
+               list = atari
+               break
+           elif pinfo.get('name') == 'bash':
+               list = psx
+               break
+           elif pinfo.get('name') == 'bash':
+               list = gameboy
+               break
+           elif pinfo.get('name') == 'bash':
+               list = gameboycolor
+               break
+           elif pinfo.get('name') == 'bash':
+               list = finalburnalpha               
+               break
+           elif pinfo.get('name') == 'bash':
+               list = mame
+               break
+           elif pinfo.get('name') == 'bash':
+               list = mastersystem
+               break
+           elif pinfo.get('name') == 'bash':
+               list = nes
+               break
+           elif pinfo.get('name') == 'bash':
+               list = gameboycolor               
+               break
+           elif pinfo.get('name') == 'bash':
+               list = dukenukem               
+               break
+           elif pinfo.get('name') == 'bash':
+               list = quake
+               break               
        except psutil.NoSuchProcess:
            pass
        else:
-           pass
+           elif pinfo.get('name') == 'bash':
+               list = retropie
+               break
 
 def Next():
    global index_co
